@@ -1,7 +1,7 @@
 {
-  "name": "node-js-sample",
-  "version": "0.2.0",
-  "description": "A sample Node.js app using Express 4",
+  "name": "odosocialtest",
+  "version": "0.0.1",
+  "description": "Test des principales fonctions Git, dev, ",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
