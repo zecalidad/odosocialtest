@@ -11,11 +11,14 @@ var server = http.createServer(function(req, res) {
     //Récupération des paramètres utilisateur   
     var querystring = require('querystring');
     var params = querystring.parse(url.parse(req.url).query);
+    //Récupération du paramètre Id (Id d'evenement)
+    var IdEvenement = params['IdEvenement'];
+    
     
     // Ecriture dans la log de l'url appelée et des paramètres
     var page = url.parse(req.url).pathname;
     console.log(scriptexecute+' : URL appelee : ' + page);
-    console.log(scriptexecute+' : Paramètres : ' + params);
+    console.log(scriptexecute+' : Paramètres : IdEvenement ' + IdEvenement);
     
     //Début de page HTML
     res.writeHead(200, {"Content-Type": "text/html"});
