@@ -2,14 +2,14 @@
 var http = require('http');
 //Récupération de l'URL demandée par l'utilisateur
 var url = require('url');
-
+var querystring = require('querystring');
 
 var server = http.createServer(function(req, res) {
     // Mise en place des éléments de Log
     var scriptexecute='index.js';
     console.log(scriptexecute+' : DEBUT');
+    
     //Récupération des paramètres utilisateur   
-    var querystring = require('querystring');
     var params = querystring.parse(url.parse(req.url).query);
     //Récupération du paramètre Id (Id d'evenement)
     var IdEvenement = params['IdEvenement'];
