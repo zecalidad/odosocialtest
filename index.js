@@ -28,7 +28,7 @@ var server = http.createServer(function(req, res) {
     if (page=='/accueil')
         res.write('<p>Page <strong>Accueil</strong> !</p>');
     else if (page=='/test')
-        res.write('<p>Page <strong>Test</strong> !</p>');
+        res.render('test.ejs',{IdEvenement: IdEvenement});
     else if (page=='/evenement/declaration')
         res.write('<p>Page <strong>Déclaration evenement</strong> !</p>');
     else if (page=='/evenement/consultation')
