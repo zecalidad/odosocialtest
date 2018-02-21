@@ -21,8 +21,8 @@ var server = http.createServer(function(req, res) {
     console.log(scriptexecute+' : Paramètres : IdEvenement ' + IdEvenement);
     
     //Entete de page HTML
-    res.writeHead(200, {"Content-Type": "text/html"});
-    res.write('<!DOCTYPE html>'+ '<html>'+ '    <head>'+ '        <meta charset="utf-8" />'+ '        <title>OdoSocialTest</title>'+ '    </head>'+ '    <body>');
+    //res.writeHead(200, {"Content-Type": "text/html"});
+    //res.write('<!DOCTYPE html>'+ '<html>'+ '    <head>'+ '        <meta charset="utf-8" />'+ '        <title>OdoSocialTest</title>'+ '    </head>'+ '    <body>');
     
     // Routage vers la page concernée 
     if (page=='/accueil')
