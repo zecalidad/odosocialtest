@@ -2,14 +2,15 @@
 var http = require('http');
 //Récupération de l'URL demandée par l'utilisateur
 var url = require('url');
-//Récupération des paramètres utilisateur
-var querystring = require('querystring');
-var params = querystring.parse(url.parse(req.url).query);
+
 
 var server = http.createServer(function(req, res) {
     // Mise en place des éléments de Log
     var scriptexecute='index.js';
     console.log(scriptexecute+' : DEBUT');
+    //Récupération des paramètres utilisateur   
+    var querystring = require('querystring');
+    var params = querystring.parse(url.parse(req.url).query);
     
     // Ecriture dans la log de l'url appelée et des paramètres
     var page = url.parse(req.url).pathname;
