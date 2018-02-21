@@ -20,13 +20,15 @@ var server = http.createServer(function(req, res) {
     console.log(scriptexecute+' : URL appelee : ' + page);
     console.log(scriptexecute+' : Paramètres : IdEvenement ' + IdEvenement);
     
-    //Début de page HTML
+    //Entete de page HTML
     res.writeHead(200, {"Content-Type": "text/html"});
     res.write('<!DOCTYPE html>'+ '<html>'+ '    <head>'+ '        <meta charset="utf-8" />'+ '        <title>OdoSocialTest</title>'+ '    </head>'+ '    <body>');
     
     // Routage vers la page concernée 
     if (page=='/accueil')
         res.write('<p>Page <strong>Accueil</strong> !</p>');
+    else if (page=='/test')
+        res.write('<p>Page <strong>Test</strong> !</p>');
     else if (page=='/evenement/declaration')
         res.write('<p>Page <strong>Déclaration evenement</strong> !</p>');
     else if (page=='/evenement/consultation')
@@ -38,7 +40,7 @@ var server = http.createServer(function(req, res) {
     else 
         res.write('<p>Page <strong>Erreur</strong> !</p>');
     
-    //Fin de page HTML
+    //Pied de page HTML
     res.write('</body>'+'</html>');
     res.end();
     console.log(scriptexecute+' : FIN');
