@@ -6,7 +6,7 @@ var url = require('url');
 var server = http.createServer(function(req, res) {
     // Ecriture dans la log de l'url appelée
     var page = url.parse(req.url).pathname;
-    console.log(page);
+    console.log('URL appelee : '+ page);
     
     res.writeHead(200, {"Content-Type": "text/html"});
     res.write('<!DOCTYPE html>'+
