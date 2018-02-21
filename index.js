@@ -17,12 +17,18 @@ var server = http.createServer(function(req, res) {
     res.write('<!DOCTYPE html>'+ '<html>'+ '    <head>'+ '        <meta charset="utf-8" />'+ '        <title>OdoSocialTest</title>'+ '    </head>'+ '    <body>');
     
     // Routage vers la page concernée 
-    if (page=='/evenement')
-        res.write('<p>Page <strong>Evenement</strong> !</p>');
+    if (page=='/accueil')
+        res.write('<p>Page <strong>Accueil</strong> !</p>');
+    else if (page=='/evenement/declaration')
+        res.write('<p>Page <strong>Déclaration evenement</strong> !</p>');
+    else if (page=='/evenement/consultation')
+        res.write('<p>Page <strong>Consultation evenement</strong> !</p>');
+    else if (page=='/evenement/choix')
+        res.write('<p>Page <strong>Choix evenement</strong> !</p>');
     else if (page=='/message')
         res.write('<p>Page <strong>Message</strong> !</p>');
     else 
-        res.write('<p>Page <strong>inconnue</strong> !</p>');
+        res.write('<p>Page <strong>Erreur</strong> !</p>');
     
     //Fin de page HTML
     res.write('</body>'+'</html>');
