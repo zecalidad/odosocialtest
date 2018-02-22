@@ -5,10 +5,10 @@ var app = express();
 var scriptexecute='index-express.js';
 console.log(scriptexecute+' : DEBUT');
 
-// Accès aux répertoires style et images
+// Accès aux répertoires CSS style (ajouter images)
 console.log(scriptexecute+' : Accès aux répertoires');
-app.use(express.static('style'));
-app.use(express.static('images'));
+app.use('/style', express.static('style'));
+
 
 
 // Page test
