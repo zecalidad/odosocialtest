@@ -6,7 +6,7 @@ var querystring = require('querystring');
 
 var server = http.createServer(function(req, res) {
     // Mise en place des éléments de Log
-    var scriptexecute='index.js';
+    var scriptexecute='index-node.js';
     console.log(scriptexecute+' : DEBUT');
     
     //Récupération des paramètres utilisateur   
