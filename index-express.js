@@ -14,11 +14,18 @@ app.use('/images', express.static('images'));
 
 
 
-// Page test
-console.log(scriptexecute+' : Accès la page test.ejs');
-app.get('/test/:idevenement', function(req, res) {
-    res.render('test.ejs', {idevenement: req.params.idevenement});
+// Page test-css
+console.log(scriptexecute+' : Accès la page test-CSS.ejs');
+app.get('/test-css/:idevenement', function(req, res) {
+    res.render('test-css.ejs', {idevenement: req.params.idevenement});
 });
+
+// Page test-gps
+console.log(scriptexecute+' : Accès la page test-GPS.ejs');
+app.get('/test-gps/:idevenement', function(req, res) {
+    res.render('test-gps.ejs', {idevenement: req.params.idevenement});
+});
+
 
 // Page erreur
 console.log(scriptexecute+' : Erreur');
